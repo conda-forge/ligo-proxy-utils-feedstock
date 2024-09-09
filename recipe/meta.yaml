@@ -1,13 +1,13 @@
 {% set name = "ligo-proxy-utils" %}
-{% set version = "2.0.0" %}
+{% set version = "2.0.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ligo-proxy-utils-{{ version }}.tar.gz
-  sha256: 420a68f313f0f2d963fa4207e7ef78b3d718fddff7ba13b578800c704a6579cd
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 46c9fb4ea9d9f8aeb6f355c77a27943b4a32fde881c1c105901fc70328ff4bda
 
 build:
   number: 0
