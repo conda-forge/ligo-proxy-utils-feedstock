@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: 46c9fb4ea9d9f8aeb6f355c77a27943b4a32fde881c1c105901fc70328ff4bda
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - ligo-proxy-init = ligo_proxy_utils.ligo_proxy_init:ligo_proxy_init
@@ -20,14 +20,14 @@ requirements:
   host:
     # build
     - pip
-    - python >=3.5
+    - python {{ python_min }}
     - setuptools >=30.3.0
     # automagic manpage generation
     - argparse-manpage
     - ciecplib
   run:
     - ciecplib
-    - python >=3.5
+    - python >={{ python_min }}
 
 test:
   commands:
@@ -37,6 +37,7 @@ test:
   requires:
     - pip
     - pytest
+    - python {{ python_min }}
 
 about:
   home: https://wiki.ligo.org/AuthProject
