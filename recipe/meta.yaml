@@ -1,5 +1,5 @@
 {% set name = "ligo-proxy-utils" %}
-{% set version = "2.0.1" %}
+{% set version = "2.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 46c9fb4ea9d9f8aeb6f355c77a27943b4a32fde881c1c105901fc70328ff4bda
+  sha256: ae78114e38852bdd48a3c4ba1af515843630efe4a45ff6eea5f9dd7038af0e85
 
 build:
-  number: 1
+  number: 0
   noarch: python
   entry_points:
     - ligo-proxy-init = ligo_proxy_utils.ligo_proxy_init:ligo_proxy_init
@@ -41,7 +41,8 @@ test:
 
 about:
   home: https://wiki.ligo.org/AuthProject
-  dev_url: https://git.ligo.org/authpublic/ligo-proxy-utils
+  dev_url: https://git.ligo.org/computing/iam/ligo-proxy-utils.git
+  doc_url: https://computing.docs.ligo.org/iam/ligo-proxy-utils/
   summary: Utilities for obtaining short-lived proxy certificates for LIGO
   license: GPL-3.0-or-later
   license_file: COPYING
