@@ -9,7 +9,9 @@ Package license: GPL-3.0-or-later
 
 Summary: Utilities for obtaining short-lived proxy certificates for LIGO
 
-Development: https://git.ligo.org/authpublic/ligo-proxy-utils
+Development: https://git.ligo.org/computing/iam/ligo-proxy-utils.git
+
+Documentation: https://computing.docs.ligo.org/iam/ligo-proxy-utils/
 
 Current build status
 ====================
